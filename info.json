@@ -1,0 +1,17 @@
+{
+  "author": [
+    "Xalvas"
+  ],
+  "description": "Simple but useful cogs for Red.",
+  "install_msg": "Thanks for installing!\nIf you have any suggestions for me, or you happen to have found any bugs, please feel free to create an issue on my repo.",
+  "name": "xal-cogs",
+  "short": "Simple utility cogs by Xalvas",
+  "tags": [
+    "utilities",
+    "fun",
+    "xalvas",
+    "gpu",
+    "benchmarks",
+    "support"
+  ]
+}

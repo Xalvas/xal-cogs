@@ -1,0 +1,12 @@
+{
+  "author": ["Xalvas"],
+  "description": "GPUBench is a simple tool for logging GPU benchmark scores, and displaying them on a leaderboard",
+  "install_msg": "Thanks for installing `GPUBench`.",
+  "short": "Benchmark logging for GPU scores!",
+  "hidden": false,
+  "disabled": false,
+  "required_cogs": {},
+  "requirements": [],
+  "tags": ["channeltools"],
+  "type": "COG"
+}
