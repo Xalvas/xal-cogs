@@ -14,7 +14,7 @@ Please find some of my creations below:
 
 # Installation
 
-Run the following commands withn a guild running your Red instance, with `[p]` being your prefix:
+Run the following commands within a guild running your Red instance, with `[p]` being your prefix:
 
 The Downloader cog is required to load my cogs. Load this first if you haven't already: `[p]load downloader`.
 
