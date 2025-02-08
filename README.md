@@ -4,15 +4,22 @@
 <h1 align="left">Hi 👋, I'm Xalvas</h1>
 Please find some of my creations below:
 <br>
+
+
+| Cog                                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [GPUBench](gpubench/README.md)       | <details><summary>A simple cog for logging community GPU benchmark scores.</summary> Use commands to log, track and display GPU benchmark scores in a simple embed format. Great for tech enthused community competitions.</details> |
+
 </br>
 
- <table>
-  <tr>
-    <th>Cog</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>GPUBench</td>
-    <td>A simple cog for logging community GPU benchmark scores.</td>
-  </tr>
-</table> 
+# Installation
+
+Run the following commands withn a guild running your Red instance, with `[p]` being your prefix:
+
+The Downloader cog is required to load my cogs. Load this first if you haven't already: `[p]load downloader`.
+
+```ini
+[p]repo add xal-cogs https://github.com/xalvas/xal-cogs
+[p]cog install xal-cogs <list of cogs>
+[p]load <list of cogs>
+```
