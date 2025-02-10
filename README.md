@@ -23,3 +23,5 @@ The Downloader cog is required to load my cogs. Load this first if you haven't a
 [p]cog install xal-cogs <list of cogs>
 [p]load <list of cogs>
 ```
+
+![Visitor Count](https://profile-counter.glitch.me/xalvas/count.svg)
