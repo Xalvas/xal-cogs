@@ -24,5 +24,5 @@ The Downloader cog is required to load my cogs. Load this first if you haven't a
 [p]load <list of cogs>
 ```
 
-Page Views:
+Page Views:</br>
 ![Visitor Count](https://profile-counter.glitch.me/xalvas/count.svg)
