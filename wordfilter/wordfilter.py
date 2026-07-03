@@ -1,7 +1,7 @@
 import re
 
 import discord
-from redbot.core import commands, Config
+from redbot.core import Config, commands
 
 
 class WordFilter(commands.Cog):
@@ -32,34 +32,71 @@ class WordFilter(commands.Cog):
         pass
 
     @filter.command(name="add")
-    async def filter_add(self, ctx, *, word: str):
-        """Add a filtered word or phrase."""
+    async def filter_add(self, ctx, *entries: str):
+        """
+        Add one or more filtered words or phrases.
 
-        word = word.lower().strip()
+        Example:
+        [p]filter add word1 word2 "bad phrase"
+        """
+
+        if not entries:
+            await ctx.send("Please provide at least one word or phrase.")
+            return
+
+        added = []
 
         async with self.config.guild(ctx.guild).words() as words:
-            if word in words:
-                await ctx.send("That filter already exists.")
-                return
+            for entry in entries:
+                entry = entry.lower().strip()
 
-            words.append(word)
+                if not entry:
+                    continue
 
-        await ctx.send(f"✅ Added filter: `{word}`")
+                if entry not in words:
+                    words.append(entry)
+                    added.append(entry)
+
+        if not added:
+            await ctx.send("Nothing new was added.")
+            return
+
+        await ctx.send(
+            f"✅ Added {len(added)} filter(s):\n"
+            + "\n".join(f"• `{entry}`" for entry in added)
+        )
 
     @filter.command(name="remove")
-    async def filter_remove(self, ctx, *, word: str):
-        """Remove a filtered word or phrase."""
+    async def filter_remove(self, ctx, *entries: str):
+        """
+        Remove one or more filtered words or phrases.
 
-        word = word.lower().strip()
+        Example:
+        [p]filter remove word1 word2 "bad phrase"
+        """
+
+        if not entries:
+            await ctx.send("Please provide at least one word or phrase.")
+            return
+
+        removed = []
 
         async with self.config.guild(ctx.guild).words() as words:
-            if word not in words:
-                await ctx.send("That filter doesn't exist.")
-                return
+            for entry in entries:
+                entry = entry.lower().strip()
 
-            words.remove(word)
+                if entry in words:
+                    words.remove(entry)
+                    removed.append(entry)
 
-        await ctx.send(f"✅ Removed filter: `{word}`")
+        if not removed:
+            await ctx.send("None of those filters exist.")
+            return
+
+        await ctx.send(
+            f"✅ Removed {len(removed)} filter(s):\n"
+            + "\n".join(f"• `{entry}`" for entry in removed)
+        )
 
     @filter.command(name="list")
     async def filter_list(self, ctx):
@@ -74,7 +111,9 @@ class WordFilter(commands.Cog):
         output = "\n".join(sorted(words))
 
         if len(output) > 1900:
-            await ctx.send(f"There are {len(words)} filters configured.")
+            await ctx.send(
+                f"There are {len(words)} filters configured. The list is too long to display."
+            )
             return
 
         await ctx.send(
@@ -152,10 +191,13 @@ class WordFilter(commands.Cog):
 
             entry = entry.lower()
 
+            # Phrase filter
             if " " in entry:
                 if entry in content:
                     matched_filter = entry
                     break
+
+            # Single word filter
             else:
                 pattern = rf"\b{re.escape(entry)}\b"
 
@@ -168,9 +210,7 @@ class WordFilter(commands.Cog):
 
         try:
             await message.delete()
-        except discord.Forbidden:
-            pass
-        except discord.NotFound:
+        except (discord.Forbidden, discord.NotFound):
             pass
 
         log_channel_id = await self.config.guild(
@@ -216,7 +256,7 @@ class WordFilter(commands.Cog):
         )
 
         embed.set_footer(
-            text=f"{message.guild.name}"
+            text=message.guild.name
         )
 
         try:
