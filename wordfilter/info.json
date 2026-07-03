@@ -1,1 +1,16 @@
-
+{
+    "author": [
+        "Xalvas"
+    ],
+    "description": "Simple word filter with logging.",
+    "end_user_data_statement": "This cog stores a list of filtered words and configuration settings.",
+    "install_msg": "WordFilter loaded.",
+    "min_bot_version": "3.5.0",
+    "name": "WordFilter",
+    "requirements": [],
+    "short": "Word filter with logging",
+    "tags": [
+        "moderation",
+        "filter"
+    ]
+}
