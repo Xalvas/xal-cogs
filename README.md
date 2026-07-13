@@ -1,6 +1,12 @@
 ![Banner (round)](https://github.com/user-attachments/assets/610890af-67ae-4539-9637-263aa54762b8)
 <h2 align="center">Simple but useful cogs for Red-DiscordBot!</h2>
 
+## License
+
+This repository is licensed under the GNU General Public License v3.0 (GPL-3.0).
+
+Note: Versions released before v2.0.0 were licensed under the MIT License. Beginning with v2.0.0, this project is licensed under GPL-3.0.
+
 <h1 align="left">Hi 👋, I'm Xalvas</h1>
 Please find some of my creations below:
 <br>
