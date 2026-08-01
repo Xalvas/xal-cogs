@@ -14,9 +14,11 @@ Please find some of my creations below:
 <br>
 
 
-| Cog                                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [GPUBench](gpubench/README.md)       | <details><summary>A simple cog for logging community GPU benchmark scores.</summary> Use commands to log, track and display GPU benchmark scores in a simple embed format. Great for tech enthused community competitions.</details> |
+| Cog                              | Description |
+|----------------------------------|-------------|
+| [GPUBench](gpubench/README.md)    | <details><summary>A simple cog for logging community GPU benchmark scores.</summary> Use commands to log, track and display GPU benchmark scores in a simple embed format. Great for tech enthused community competitions.</details> |
+| [VoiceAlert](voicealert/)         | <details><summary>A cog for creating temporary voice support rooms.</summary> Deploy a persistent request panel that creates private voice rooms and alerts configured staff roles. Rooms are cleaned up automatically when no longer needed.</details> |
+| [WordFilter](wordfilter/)         | <details><summary>A simple word filter cog with logging.</summary> Add, remove and list filtered words, configure a log channel and exempt role, and automatically delete matching messages.</details> |
 
 </br>
 
