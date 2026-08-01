@@ -1,0 +1,18 @@
+{
+    "author": ["Xalvas"],
+    "description": "Creates private temporary voice support rooms from a persistent request panel and alerts configured staff roles.",
+    "install_msg": "VoiceAlert has been installed. Load it with `[p]load voicealert`.",
+    "short": "Request-based temporary voice support rooms.",
+    "tags": [
+        "voice",
+        "support",
+        "temporary rooms",
+        "roles",
+        "notifications"
+    ],
+    "requirements": [],
+    "hidden": false,
+    "disabled": false,
+    "min_bot_version": "3.5.0",
+    "end_user_data_statement": "This cog stores server configuration plus requester user IDs, temporary voice channel IDs, room creation times, and whether each temporary room has previously been occupied while support rooms are active. It does not store message content."
+}
