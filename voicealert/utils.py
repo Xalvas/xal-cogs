@@ -5,6 +5,9 @@ import unicodedata
 from typing import Protocol
 
 
+MAX_CHANNEL_NAME_LENGTH = 100
+
+
 class ChannelNameMember(Protocol):
     """The member attributes used when rendering a room name."""
 

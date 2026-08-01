@@ -25,7 +25,7 @@ class VoiceAlert(commands.Cog):
     """Create private, temporary voice rooms for support requests."""
 
     __author__: Final[list[str]] = ["Xalvas"]
-    __version__: Final[str] = "0.4.0"
+    __version__: Final[str] = "0.4.1"
     SCHEMA_VERSION: Final[int] = 2
     MAX_CHANNEL_NAME_LENGTH: Final[int] = 100
     MAX_COOLDOWN_SECONDS: Final[int] = 86400

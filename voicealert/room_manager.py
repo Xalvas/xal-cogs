@@ -11,7 +11,7 @@ from typing import TYPE_CHECKING, Optional
 import discord
 from redbot.core import commands
 
-from .utils import render_channel_name
+from .utils import MAX_CHANNEL_NAME_LENGTH, render_channel_name
 from .validation import configuration_issues, missing_permissions, valid_roles
 from .views import join_voice_support_view
 
@@ -429,7 +429,7 @@ class RoomManager:
                         name=render_channel_name(
                             settings["channel_name_template"],
                             member,
-                            max_length=self.MAX_CHANNEL_NAME_LENGTH,
+                            max_length=MAX_CHANNEL_NAME_LENGTH,
                         ),
                         category=category,
                         overwrites=overwrites,
